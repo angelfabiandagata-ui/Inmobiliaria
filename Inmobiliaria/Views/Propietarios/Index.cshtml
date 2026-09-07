@@ -1,0 +1,42 @@
+@model IEnumerable<Inmobiliaria_.Net_Core.Models.Propietario>
+
+<h2>Listado de Propietarios</h2>
+
+<p>
+    <a asp-action="Editar" class="btn btn-primary">Alta Propietario</a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.IdPropietario)</th>
+            <th>Nombre Completo</th>
+            <th>@Html.DisplayNameFor(model => model.Dni)</th>
+            <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.IdPropietario</td>
+            <td>@item.ToString()</td>
+            <td>@item.Dni</td>
+            <td>@item.Telefono</td>
+            <td>@item.Email</td>
+            <td>
+                <a asp-action="Detalles" asp-route-id="@item.IdPropietario" class="btn btn-sm btn-info" title="Detalles">
+                    <i class="bi bi-info-circle"> </i> Detalles
+                </a>
+                <a asp-action="Editar" asp-route-id="@item.IdPropietario" class="btn btn-sm btn-warning" title="Modificar">
+                    <i class="bi bi-pencil-square"> </i> Modificar
+                </a>
+                <a asp-action="Eliminar" asp-route-id="@item.IdPropietario" class="btn btn-sm btn-danger">
+                     <i class="bi bi-trash-fill"> </i> Borrar
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
