@@ -1,0 +1,61 @@
+# Inmobiliaria
+.net practica
+
+> El sistema trata de la informatización de la gestión de alquileres
+temporarios de propiedades inmuebles que realiza una agencia
+inmobiliaria.
+
+---
+
+## 👥 Integrante
+
+* **Fabian D'Agata** - *angelfabiandagata@gmail.com* - [@angelfabiandagata-ui]
+
+
+---
+
+## 📐 Modelado de Datos
+
+A continuación se presenta el esquema del modelo de datos correspondiente a la aplicación:
+
+![Diagrama del Proyecto](./img/inmobiliariasad.png)
+
+---
+
+## 🛠️ Requisitos Previos
+
+* [.NET SDK](https://dotnet.microsoft.com/download) (versión 8.0 o superior)
+* Servidor MySQL / MariaDB (por ejemplo, mediante [XAMPP](https://www.apachefriends.org/) o MySQL Workbench)
+
+---
+
+## Comandos
+
+Configurar la Base de Datos:
+
+Iniciar el servidor MySQL (por ejemplo, desde el panel de control de XAMPP).
+o instalando el driver de mySql (corre en segundo plano hasta detenerlo)
+
+Abrir el gestor de base de datos preferido (phpMyAdmin, MySQL Workbench, DBeaver etc.).
+
+Ejecutar el script SQL incluido en el proyecto:
+
+* Archivo: DB.sql
+(Ejecutando este archivo ya se crea la base de datos)
+
+Verificar en el archivo `appsettings.json` que el usuario y la contraseña coincidan con los de tu entorno local:
+
+"ConnectionString":  "Server=localhost;Database=InmobiliariaSAD;User=root;Password=;"
+
+---
+
+# Correr el programa
+*Abrir la terminal en la raíz del repositorio y acceder a la carpeta del proyecto:*
+`cd inmobiliaria` 
+
+*Para inicializar:*
+`dotnet run`
+
+*Si es la primera vez* que se inicia el proyecto , ponga este comando para decirle al navegador que confie en este proyecto: 
+`dotnet dev-certs https --trust`
+
